@@ -11,7 +11,9 @@ public class ButtonJugar extends Button
 {
     static ButtonJugar instance;
     
-    private ButtonJugar(){}
+    private ButtonJugar(){
+    setImage("images/button_jugar.png");
+    }
     
     public static ButtonJugar getInstance(){
         if (instance == null){

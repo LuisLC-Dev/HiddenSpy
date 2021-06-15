@@ -14,7 +14,9 @@ public class ButtonRecords extends Button
      */
     static ButtonRecords instance;
     
-    private ButtonRecords(){}
+    private ButtonRecords(){
+    setImage("button_records.png");
+    }
     
     public static ButtonRecords getInstance(){
         if (instance == null){

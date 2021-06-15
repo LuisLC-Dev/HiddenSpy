@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Pantalla_Inicio extends World
 {
     public Pantalla_Inicio()
-    {    
+    {   
         super(960, 540, 1);
         addElements();
     }

@@ -15,7 +15,11 @@ public class ButtonAyuda extends Button
      */
     static ButtonAyuda instance;
     
-    private ButtonAyuda(){}
+    private ButtonAyuda(){
+        setImage("images/button_ayuda.png");
+    }
+   
+    
     
     public static ButtonAyuda getInstance(){
         if (instance == null){
