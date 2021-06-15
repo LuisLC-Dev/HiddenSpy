@@ -1,18 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Button_Jugar here.
+ * Este es un boton que al ser presionado incia el juego, osea crea un nuevo
+ * mundo donde estara mi primer nivel
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Hector Gustavo Hernandez Reyes) 
+ * @version (14/06/2021)
  */
 public class ButtonJugar extends Button
 {
-    /**
-     * Act - do whatever the Button_Jugar wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    
     static ButtonJugar instance;
     
     private ButtonJugar(){}
@@ -25,6 +21,7 @@ public class ButtonJugar extends Button
     }
     
     void buttonAction(){
-        getWorld().showText("Boton Jugar",100, 100);
+        Juego juego = new Juego(1, 27, 17);
+        Greenfoot.setWorld(juego);
     } 
 }

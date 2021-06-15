@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Button_Ayuda here.
+ * Este es un boton que al ser presionado muestra las instrucciones de nuestro
+ * juego, para que sepan como jugar.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Hector Gustavo Hernandez Reyes) 
+ * @version (14/06/2021)
  */
 public class ButtonAyuda extends Button
 {
