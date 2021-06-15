@@ -13,8 +13,11 @@ public class Enemy2 extends Enemy
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
+    private int currentImage;
+    private int counter;
+    
     public Enemy2(){
-    setImage("Images/Enemy2Front.png");
+    setImage("images/Enemy2Front.png");
     }
     
     public void act() 
