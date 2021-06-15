@@ -23,7 +23,7 @@ public class ButtonJugar extends Button
     }
     
     void buttonAction(){
-        Juego juego = new Juego(1, 27, 17);
+        Juego juego = new Juego(1, 27, 17,getWorld());
         Greenfoot.setWorld(juego);
     } 
 }

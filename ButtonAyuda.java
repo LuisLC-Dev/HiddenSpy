@@ -9,27 +9,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class ButtonAyuda extends Button
 {
-    /**
-     * Act - do whatever the Button_Ayuda wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    static ButtonAyuda instance;
-    
-    private ButtonAyuda(){
+    public ButtonAyuda(){
         setImage("images/button_ayuda.png");
-    }
-   
-    
-    
-    public static ButtonAyuda getInstance(){
-        if (instance == null){
-            instance = new ButtonAyuda();
-        }
-        return instance;
     }
     
     void buttonAction(){
-        PantallaAyuda pantallaAyuda = new PantallaAyuda(getWorld());
-        Greenfoot.setWorld(pantallaAyuda);
+        Ayuda ayuda = new Ayuda(getWorld());
+        Greenfoot.setWorld(ayuda);
     }  
 }

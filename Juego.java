@@ -7,12 +7,13 @@ import java.util.*;
  * @author (Hector Gustavo Hernandez Reyes) 
  * @version (14/06/2021)
  */
-public class git Juego extends World
+public class Juego extends World
 {
-    public Juego(int numNivel, int ancho, int alto)
+    public Juego(int numNivel, int ancho, int alto, World world)
     {    
-        super(1280,720, 1);
+        super(1300,680, 1);
         cargaNivel(numNivel, ancho,alto);
+        addButtons(world);
     }
     
     private void cargaNivel(int numNivel, int ancho, int alto){
@@ -28,5 +29,11 @@ public class git Juego extends World
                 }
             }
         }catch (FileNotFoundException e){Greenfoot.stop();}
+    }
+    
+    void addButtons(World world){
+        addObject(new ButtonRegresar(world),1200, 640);
+        addObject(new ButtonAyuda(),1200, 580);
+        addObject(new ButtonRecords(),1200, 520);
     }
 }

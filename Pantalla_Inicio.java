@@ -16,7 +16,7 @@ public class Pantalla_Inicio extends World
     
     void addElements(){
         addObject(ButtonJugar.getInstance(),480,300);
-        addObject(ButtonAyuda.getInstance(),480,380);
-        addObject(ButtonRecords.getInstance(),480,460);
+        addObject(new ButtonAyuda(),480,380);
+        addObject(new ButtonRecords(),480,460);
     }
 }
