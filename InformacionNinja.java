@@ -28,7 +28,7 @@ public class InformacionNinja
     }
     
     public void draw(World world){
-        world.showText("Vida: " + vida,1200,100);
+        world.showText("Vida: " + (vida/10),1200,100);
         world.showText("Nivel: " + nivel,1200,200);
     }
 }

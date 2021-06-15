@@ -16,6 +16,7 @@ public class FinDelJuego extends World
     public FinDelJuego()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(600, 400, 1);
+        showText("Se acabo el juego", 300, 200);
     }
 }

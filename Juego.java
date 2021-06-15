@@ -4,9 +4,11 @@ import java.util.*;
 
 public class Juego extends World
 {
+    InformacionNinja info;
     public Juego(int numNivel, int ancho, int alto, World world, InformacionNinja info)
     {    
         super(1300,680, 1);
+        this.info = info;
         cargaNivel(numNivel, ancho,alto, info);
         addButtons(world);
         info.draw(this);
@@ -23,6 +25,10 @@ public class Juego extends World
                     if(num != 0){
                         addObject(ActorFactory.getActor(num, info),20+40*j,20+40*i);
                     }
+                    if(num == 3 || num == 4 ||num == 5)
+                        {
+                            addObject(new VisionRange(),20+40*j,20+40*i);
+                        }
                 }
             }
             sc.close();
@@ -33,5 +39,9 @@ public class Juego extends World
         addObject(new ButtonRegresar(world),1200, 640);
         addObject(new ButtonAyuda(),1200, 580);
         addObject(new ButtonRecords(),1200, 520);
+    }
+    
+    public void act(){
+        info.draw(this);
     }
 }
