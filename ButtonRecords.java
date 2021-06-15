@@ -14,7 +14,9 @@ public class ButtonRecords extends Button
      */
     static ButtonRecords instance;
     
-    private ButtonRecords(){}
+    private ButtonRecords(){
+    setImage("button_records.png");
+    }
     
     public static ButtonRecords getInstance(){
         if (instance == null){
@@ -25,5 +27,7 @@ public class ButtonRecords extends Button
     
     void buttonAction(){
         getWorld().showText("Boton Records",100, 200);
+        Records pantRecords = new Records();
+        Greenfoot.setWorld(pantRecords);
     } 
 }
