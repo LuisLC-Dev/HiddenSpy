@@ -14,12 +14,20 @@ public class Enemy1 extends Enemy
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
+    
+    
     private int currentImage;
     private int counter;
     private int ifi = 1;
     private int dir;
-    public Enemy1(){
+    public VisionRange vr;
+    
+    
+    public Enemy1(VisionRange vr){
+        this.vr = vr;
     setImage("images/Enemy1Front.png");
+            
+           
             dir = Greenfoot.getRandomNumber(3);
             ArrayList<GreenfootImage> pSprites= new ArrayList<>();
             ArrayList<Integer> pIntegers= new ArrayList<>();
@@ -96,9 +104,9 @@ public class Enemy1 extends Enemy
         ifi = 1;
     }
         nextSprite();
-        EnemyDirection();
+        EnemyDirection(vr);
     }
-    public void EnemyDirection()
+    public void EnemyDirection(VisionRange vr)
     {
         int x = getX();
         int y = getY();
@@ -110,10 +118,11 @@ public class Enemy1 extends Enemy
             if(collide!=null)
             {
                 OFFSET=0;
-               dir = 5;
+                dir = 5;
                 dir = Greenfoot.getRandomNumber(4);
             }
             setLocation(x + OFFSET, y);
+            vr.setLocation(x + OFFSET, y);
            
         }
         else if(dir == 1)
@@ -126,7 +135,7 @@ public class Enemy1 extends Enemy
                 dir = Greenfoot.getRandomNumber(4);
             }
             setLocation(x - OFFSET, y);
-            //setRotation(-180);
+            vr.setLocation(x - OFFSET, y);
         }
         else if(dir == 3)
         {
@@ -138,7 +147,7 @@ public class Enemy1 extends Enemy
                 dir = Greenfoot.getRandomNumber(4);
             }
             setLocation(x, y - OFFSET);
-            //setRotation(-90);
+            vr.setLocation(x, y - OFFSET);
         }
         else if(dir == 0)
         {
@@ -152,7 +161,7 @@ public class Enemy1 extends Enemy
             }
             
             setLocation(x, y + OFFSET);
-            //setRotation(-270);
+            vr.setLocation(x, y + OFFSET);
         }
         animacion.setFila(dir);
     }

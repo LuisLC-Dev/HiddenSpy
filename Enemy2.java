@@ -18,8 +18,11 @@ public class Enemy2 extends Enemy
     private int counter;
     private int ifi = 1;
     private int dir;
-    public Enemy2(){
-    setImage("images/Enemy1Front.png");
+    public VisionRange vr;
+    
+    
+    public Enemy2(VisionRange vr){
+        this.vr = vr;
             dir = Greenfoot.getRandomNumber(3);
             ArrayList<GreenfootImage> pSprites= new ArrayList<>();
             ArrayList<Integer> pIntegers= new ArrayList<>();

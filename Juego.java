@@ -21,6 +21,10 @@ public class Juego extends World
                     int num = sc.nextInt();
                     if(num != 0){
                         addObject(ActorFactory.getActor(num),20+40*j,20+40*i);
+                        if(num == 3 || num == 4 ||num == 5)
+                        {
+                            addObject(new VisionRange(),20+40*j,20+40*i);
+                        }
                     }
                 }
             }
