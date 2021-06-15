@@ -12,7 +12,7 @@ public class ButtonJugar extends Button
     static ButtonJugar instance;
     
     private ButtonJugar(){
-    setImage("images/button_jugar.png");
+        setImage("images/button_jugar.png");
     }
     
     public static ButtonJugar getInstance(){
@@ -23,7 +23,7 @@ public class ButtonJugar extends Button
     }
     
     void buttonAction(){
-        Juego juego = new Juego(1, 27, 17,getWorld(), new InformacionNinja(100,1));
-        Greenfoot.setWorld(juego);
+       Juego juego = new Juego(1, 27, 17,getWorld(), new InformacionNinja(1,1));
+       Greenfoot.setWorld(juego);
     } 
 }

@@ -7,7 +7,7 @@ public class Records extends World
     public Records(World world){
        super(960, 540, 1);
        cargarRecords();
-       addObject(new ButtonRegresar(world),860,490);
+       addObject(new ButtonRegresar(world),860,430);
     }
     
     private void cargarRecords(){

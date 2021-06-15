@@ -20,9 +20,9 @@ public class Rejilla extends Actor
             if(info.getNivel() <= 3 && info.getVida() > 0){
                 Juego juego = new Juego((info.getNivel()), 27, 17,getWorld(), info);
                 Greenfoot.setWorld(juego);
-            }else{
-                FinDelJuego fin = new FinDelJuego();
-                Greenfoot.setWorld(fin);
+            }else if(info.getNivel() == 4){
+                Victoria victoria = new Victoria(info);
+                Greenfoot.setWorld(victoria);
             }
         }
     }

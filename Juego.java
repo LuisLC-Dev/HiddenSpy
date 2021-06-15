@@ -46,5 +46,9 @@ public class Juego extends World
     
     public void act(){
         info.draw(this);
+        if(info.getVida() <= 0){
+            FinDelJuego fin = new FinDelJuego(info);
+            Greenfoot.setWorld(fin);
+        }
     }
 }

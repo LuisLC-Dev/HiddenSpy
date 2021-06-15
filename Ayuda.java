@@ -4,7 +4,8 @@ public class Ayuda extends World
 {
     public Ayuda(World world)
     {    
-        super(600, 400, 1);
-        addObject(new ButtonRegresar(world),500,350);
+        super(960, 540, 1);
+        addObject(new ButtonRegresar(world),800,430);
+        setBackground("images/Ayuda.png");
     }
 }

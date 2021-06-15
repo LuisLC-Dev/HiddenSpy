@@ -101,6 +101,7 @@ public class Ninja extends Dibujo
     public void check(){
         if(this.isTouching(VisionRange.class)){
             info.quitarVida();
+            setLocation(60,60);
         }
     }
     
