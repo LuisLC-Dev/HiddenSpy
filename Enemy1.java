@@ -128,7 +128,7 @@ public class Enemy1 extends Enemy
             setLocation(x - OFFSET, y);
             //setRotation(-180);
         }
-        else if(dir == 0)
+        else if(dir == 3)
         {
             Actor collide=getOneObjectAtOffset(0,-20,Wall.class);
             if(collide!=null)
@@ -140,7 +140,7 @@ public class Enemy1 extends Enemy
             setLocation(x, y - OFFSET);
             //setRotation(-90);
         }
-        else if(dir == 3)
+        else if(dir == 0)
         {
             Actor collide=getOneObjectAtOffset(0,20,Wall.class);
             if(collide!=null)
@@ -150,8 +150,10 @@ public class Enemy1 extends Enemy
                 dir = Greenfoot.getRandomNumber(4);
                 
             }
+            
             setLocation(x, y + OFFSET);
             //setRotation(-270);
         }
+        animacion.setFila(dir);
     }
 }
