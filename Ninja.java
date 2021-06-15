@@ -6,8 +6,10 @@ public class Ninja extends Dibujo
     private int currentImage;
     private int counter;
     private int ifi = 1;
+    private InformacionNinja info;
     
-    public Ninja(){
+    public Ninja(InformacionNinja info){
+            this.info = info;
             ArrayList<GreenfootImage> pSprites= new ArrayList<>();
             ArrayList<Integer> pIntegers= new ArrayList<>();
 
@@ -52,7 +54,7 @@ public class Ninja extends Dibujo
             
     }
     
-    public void act() 
+    public void act()
     {
         int x=0;
         int y=0;
@@ -88,7 +90,14 @@ public class Ninja extends Dibujo
     
     handleDirection();
     nextSprite();
+    check();
     
+    }
+    
+    public void check(){
+        if(this.isTouching(Enemy.class)){
+            info.quitarVida();
+        }
     }
     
     public void handleDirection()
@@ -139,5 +148,4 @@ public class Ninja extends Dibujo
             //setRotation(-270);
         }
     }
-  
 }
