@@ -13,6 +13,7 @@ public class Juego extends World
     {    
         super(1280,720, 1);
         cargaNivel(numNivel, ancho,alto);
+        addObject(new Enemy1(), 60, 60);
     }
     
     private void cargaNivel(int numNivel, int ancho, int alto){

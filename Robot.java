@@ -12,8 +12,14 @@ public class Robot extends Enemy
      * Act - do whatever the Robot wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    
+    private int currentImage;
+    private int counter;
+    
     public void act() 
     {
-        // Add your action code here.
+        
+    setImage("images/RobotFront.png");
+    
     }    
 }
