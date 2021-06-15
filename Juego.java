@@ -23,12 +23,15 @@ public class Juego extends World
                 for(int j = 0; j < ancho; j++){
                     int num = sc.nextInt();
                     if(num != 0){
-                        addObject(ActorFactory.getActor(num, info),20+40*j,20+40*i);
-                    }
-                    if(num == 3 || num == 4 ||num == 5)
+                        Actor aux = ActorFactory.getActor(num, info);
+                        addObject(aux,20+40*j,20+40*i);
+                        if(num == 3 || num == 4 ||num == 5)
                         {
-                            addObject(new VisionRange(),20+40*j,20+40*i);
+                            Enemy ene = (Enemy)aux;
+                            ene.addVisionRange();
                         }
+                    }
+                    
                 }
             }
             sc.close();

@@ -18,11 +18,9 @@ public class Enemy2 extends Enemy
     private int counter;
     private int ifi = 1;
     private int dir;
-    public VisionRange vr;
     
     
-    public Enemy2(VisionRange vr){
-        this.vr = vr;
+    public Enemy2(){
             dir = Greenfoot.getRandomNumber(3);
             ArrayList<GreenfootImage> pSprites= new ArrayList<>();
             ArrayList<Integer> pIntegers= new ArrayList<>();
@@ -117,6 +115,8 @@ public class Enemy2 extends Enemy
                 dir = Greenfoot.getRandomNumber(4);
             }
             setLocation(x + OFFSET, y);
+            vr.setY(y);
+            vr.setX(x + OFFSET);
            
         }
         else if(dir == 1)
@@ -129,7 +129,8 @@ public class Enemy2 extends Enemy
                 dir = Greenfoot.getRandomNumber(4);
             }
             setLocation(x - OFFSET, y);
-            //setRotation(-180);
+            vr.setY(y);
+            vr.setX(x - OFFSET);
         }
         else if(dir == 3)
         {
@@ -141,7 +142,8 @@ public class Enemy2 extends Enemy
                 dir = Greenfoot.getRandomNumber(4);
             }
             setLocation(x, y - OFFSET);
-            //setRotation(-90);
+            vr.setY(y - OFFSET);
+            vr.setX(x);
         }
         else if(dir == 0)
         {
@@ -153,9 +155,9 @@ public class Enemy2 extends Enemy
                 dir = Greenfoot.getRandomNumber(4);
                 
             }
-            
             setLocation(x, y + OFFSET);
-            //setRotation(-270);
+            vr.setY(y + OFFSET);
+            vr.setX(x);
         }
         animacion.setFila(dir);
     } 

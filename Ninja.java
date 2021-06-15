@@ -91,11 +91,15 @@ public class Ninja extends Dibujo
     handleDirection();
     nextSprite();
     check();
+    if(info.getVida() == 0){
+    FinDelJuego fin = new FinDelJuego();
+                Greenfoot.setWorld(fin);
+    }
     
     }
     
     public void check(){
-        if(this.isTouching(Enemy.class)){
+        if(this.isTouching(VisionRange.class)){
             info.quitarVida();
         }
     }

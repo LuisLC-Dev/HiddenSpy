@@ -17,11 +17,9 @@ public class Robot extends Enemy
     private int counter;
     private int ifi = 1;
     private int dir;
-    public VisionRange vr;
     
     
-    public Robot(VisionRange vr){
-        this.vr = vr;
+    public Robot(){
     setImage("images/Enemy1Front.png");
             dir = Greenfoot.getRandomNumber(3);
             ArrayList<GreenfootImage> pSprites= new ArrayList<>();
@@ -99,9 +97,9 @@ public class Robot extends Enemy
         ifi = 1;
     }
         nextSprite();
-        EnemyDirection(vr);
+        EnemyDirection();
     }
-    public void EnemyDirection(VisionRange vr)
+    public void EnemyDirection()
     {
         int x = getX();
         int y = getY();
@@ -117,7 +115,8 @@ public class Robot extends Enemy
                 dir = Greenfoot.getRandomNumber(4);
             }
             setLocation(x + OFFSET, y);
-            vr.setLocation(x + OFFSET, y);
+            vr.setY(y);
+             vr.setX(x + OFFSET);
         }
         else if(dir == 1)
         {
@@ -129,7 +128,8 @@ public class Robot extends Enemy
                 dir = Greenfoot.getRandomNumber(4);
             }
             setLocation(x - OFFSET, y);
-            vr.setLocation(x + OFFSET, y);
+            vr.setY(y);
+             vr.setX(x - OFFSET);
         }
         else if(dir == 3)
         {
@@ -141,7 +141,8 @@ public class Robot extends Enemy
                 dir = Greenfoot.getRandomNumber(4);
             }
             setLocation(x, y - OFFSET);
-            vr.setLocation(x + OFFSET, y);
+            vr.setY(y - OFFSET);
+            vr.setX(x);
         }
         else if(dir == 0)
         {
@@ -155,7 +156,8 @@ public class Robot extends Enemy
             }
             
             setLocation(x, y + OFFSET);
-            vr.setLocation(x + OFFSET, y);
+            vr.setY(y + OFFSET);
+            vr.setX(x);
         }
         animacion.setFila(dir);
     } 

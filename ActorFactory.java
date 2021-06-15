@@ -10,13 +10,13 @@ public class ActorFactory
             return new Ninja(info);
         }
         if(type == 3){
-            return new Enemy1(new VisionRange());
+            return new Enemy1();
         }
         if(type == 4){
-            return new Enemy2(new VisionRange());
+            return new Enemy2();
         }
         if(type == 5){
-            return new Robot(new VisionRange());
+            return new Robot();
         }
         if(type == 6){
             return  new Rejilla(info);
