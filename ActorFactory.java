@@ -19,7 +19,7 @@ public class ActorFactory
             return new Robot();
         }
         if(type == 6){
-            return null;
+            return  new Rejilla();
         }
         return null;
     }
