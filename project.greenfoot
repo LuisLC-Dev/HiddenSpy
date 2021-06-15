@@ -1,14 +1,4 @@
 #Greenfoot project file
-<<<<<<< HEAD
-class.Enemy1.image=Enemy1Front.png
-class.Enemy2.image=Enemy2Front.png
-class.Ninja.image=NinjaFront.png
-class.Pantalla_Inicio.image=Fondo_Pantalla_Inicio.png
-class.Records.image=Fondo_Pantalla_Inicio.png
-class.Robot.image=RobotWalking1.png
-dependency1.from=Juego
-dependency1.to=Wall
-=======
 class.ButtonAyuda.image=button_ayuda.png
 class.ButtonJugar.image=button_jugar.png
 class.ButtonRecords.image=button_records.png
@@ -16,16 +6,15 @@ class.Pantalla_Inicio.image=Fondo_Pantalla_Inicio.png
 class.Wall.image=general-wall.png
 dependency1.from=Pantalla_Inicio
 dependency1.to=ButtonJugar
->>>>>>> b4e80cc83bc3b967153608c1671c8e203f6e90a0
 dependency1.type=UsesDependency
 dependency2.from=Pantalla_Inicio
-dependency2.to=ButtonJugar
+dependency2.to=ButtonAyuda
 dependency2.type=UsesDependency
 dependency3.from=Pantalla_Inicio
-dependency3.to=ButtonAyuda
+dependency3.to=ButtonRecords
 dependency3.type=UsesDependency
-dependency4.from=Pantalla_Inicio
-dependency4.to=ButtonRecords
+dependency4.from=Juego
+dependency4.to=Wall
 dependency4.type=UsesDependency
 dependency5.from=ButtonJugar
 dependency5.to=Juego
@@ -39,13 +28,8 @@ editor.fx.0.x=360
 editor.fx.0.y=28
 height=838
 package.numDependencies=6
-<<<<<<< HEAD
-package.numTargets=13
-project.charset=UTF-8
-=======
 package.numTargets=10
 project.charset=windows-1252
->>>>>>> b4e80cc83bc3b967153608c1671c8e203f6e90a0
 publish.hasSource=false
 publish.locked=true
 publish.longDesc=
@@ -67,40 +51,12 @@ target1.width=110
 target1.x=0
 target1.y=0
 target10.height=50
-<<<<<<< HEAD
-target10.name=ButtonJugar
-=======
 target10.name=ButtonAyuda
->>>>>>> b4e80cc83bc3b967153608c1671c8e203f6e90a0
 target10.showInterface=false
 target10.type=ClassTarget
-target10.width=90
+target10.width=100
 target10.x=0
 target10.y=0
-<<<<<<< HEAD
-target11.height=50
-target11.name=ButtonRecords
-target11.showInterface=false
-target11.type=ClassTarget
-target11.width=100
-target11.x=0
-target11.y=0
-target12.height=50
-target12.name=Robot
-target12.showInterface=false
-target12.type=ClassTarget
-target12.width=80
-target12.x=0
-target12.y=0
-target13.height=50
-target13.name=Records
-target13.showInterface=false
-target13.type=ClassTarget
-target13.width=80
-target13.x=0
-target13.y=0
-=======
->>>>>>> b4e80cc83bc3b967153608c1671c8e203f6e90a0
 target2.height=50
 target2.name=ButtonRegresar
 target2.showInterface=false
@@ -144,28 +100,17 @@ target7.width=80
 target7.x=0
 target7.y=0
 target8.height=50
-<<<<<<< HEAD
-target8.name=Ninja
-=======
 target8.name=ButtonRecords
->>>>>>> b4e80cc83bc3b967153608c1671c8e203f6e90a0
 target8.showInterface=false
 target8.type=ClassTarget
 target8.width=110
 target8.x=0
 target8.y=0
 target9.height=50
-<<<<<<< HEAD
-target9.name=Enemy
-target9.showInterface=false
-target9.type=ClassTarget
-target9.width=80
-=======
 target9.name=PantallaAyuda
 target9.showInterface=false
 target9.type=ClassTarget
 target9.width=100
->>>>>>> b4e80cc83bc3b967153608c1671c8e203f6e90a0
 target9.x=0
 target9.y=0
 version=3.0.0
