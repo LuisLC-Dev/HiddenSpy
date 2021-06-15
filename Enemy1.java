@@ -95,6 +95,6 @@ public class Enemy1 extends Enemy
         animacion.setFrameActual(0);
         ifi = 1;
     }
-        nextSprite();
+        //nextSprite();
     }    
 }
