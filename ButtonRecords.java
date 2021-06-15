@@ -27,5 +27,7 @@ public class ButtonRecords extends Button
     
     void buttonAction(){
         getWorld().showText("Boton Records",100, 200);
+        Records pantRecords = new Records();
+        Greenfoot.setWorld(pantRecords);
     } 
 }
