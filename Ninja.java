@@ -1,18 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.ArrayList;
-/**
- * Write a description of class Ninja here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+
 public class Ninja extends Dibujo
 {
-    /**
-     * Act - do whatever the Ninja wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    
     private int currentImage;
     private int counter;
     private int ifi = 1;

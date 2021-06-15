@@ -1,12 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.io.*;
 import java.util.*;
-/**
- * Write a description of class Records here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+
 public class Records extends World
 {
     public Records(World world){

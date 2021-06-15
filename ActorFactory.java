@@ -7,7 +7,19 @@ public class ActorFactory
             return new Wall();
         }
         if(type == 2){
+            return new Ninja();
+        }
+        if(type == 3){
             return new Enemy1();
+        }
+        if(type == 4){
+            return new Enemy2();
+        }
+        if(type == 5){
+            return new Robot();
+        }
+        if(type == 6){
+            return null;
         }
         return null;
     }

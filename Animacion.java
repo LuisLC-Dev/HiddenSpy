@@ -103,11 +103,8 @@ public class Animacion
             }
             direcciones.add(nArray);
         }
-       ArrayList<Integer> nArray=new ArrayList<>();
-       direcciones.add(nArray);
+        ArrayList<Integer> nArray=new ArrayList<>();
+        direcciones.add(nArray);
            
     }
-    
-    
-        
 }
