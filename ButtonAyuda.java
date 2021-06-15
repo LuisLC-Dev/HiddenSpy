@@ -29,6 +29,7 @@ public class ButtonAyuda extends Button
     }
     
     void buttonAction(){
-        getWorld().showText("Boton Ayuda",100, 150);
+        PantallaAyuda pantallaAyuda = new PantallaAyuda(getWorld());
+        Greenfoot.setWorld(pantallaAyuda);
     }  
 }

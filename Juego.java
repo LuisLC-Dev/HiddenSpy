@@ -7,7 +7,7 @@ import java.util.*;
  * @author (Hector Gustavo Hernandez Reyes) 
  * @version (14/06/2021)
  */
-public class Juego extends World
+public class git Juego extends World
 {
     public Juego(int numNivel, int ancho, int alto)
     {    
