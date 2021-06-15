@@ -17,10 +17,10 @@ public class Enemy1 extends Enemy
     private int currentImage;
     private int counter;
     private int ifi = 1;
-   
+    private int dir;
     public Enemy1(){
     setImage("images/Enemy1Front.png");
-    
+            dir = Greenfoot.getRandomNumber(3);
             ArrayList<GreenfootImage> pSprites= new ArrayList<>();
             ArrayList<Integer> pIntegers= new ArrayList<>();
 
@@ -67,25 +67,25 @@ public class Enemy1 extends Enemy
     
     public void act() 
     {
-        if(Greenfoot.isKeyDown("s")){
+        if(dir == 0){
             if(ifi == 1){
                 ifi = 0;
         animacion.setFila(0);
         }
         }else
-        if(Greenfoot.isKeyDown("a")){
+        if(dir == 1){
             if(ifi == 1){
                 ifi = 0;
         animacion.setFila(1);
         }
     }else
-        if(Greenfoot.isKeyDown("d")){
+        if(dir == 2){
             if(ifi == 1){
                 ifi = 0;
         animacion.setFila(2);
     }
         }else
-        if(Greenfoot.isKeyDown("w")){
+        if(dir == 3){
             if(ifi == 1){
                 ifi = 0;
         animacion.setFila(3);
@@ -95,6 +95,65 @@ public class Enemy1 extends Enemy
         animacion.setFrameActual(0);
         ifi = 1;
     }
-        //nextSprite();
-    }    
+        nextSprite();
+        EnemyDirection();
+    }
+    public void EnemyDirection()
+    {
+        int x = getX();
+        int y = getY();
+        int OFFSET = 2;
+
+        if(dir == 2)
+        {
+           Actor collide=getOneObjectAtOffset(20,0,Wall.class);
+            if(collide!=null)
+            {
+                OFFSET=0;
+               dir = 5;
+                dir = Greenfoot.getRandomNumber(4);
+            }
+            setLocation(x + OFFSET, y);
+           
+        }
+        else if(dir == 1)
+        {
+           Actor collide=getOneObjectAtOffset(-20,0,Wall.class);
+            if(collide!=null)
+            {
+                OFFSET=0;
+                dir = 5;
+                dir = Greenfoot.getRandomNumber(4);
+            }
+            setLocation(x - OFFSET, y);
+            //setRotation(-180);
+        }
+        else if(dir == 3)
+        {
+            Actor collide=getOneObjectAtOffset(0,-20,Wall.class);
+            if(collide!=null)
+            {
+                OFFSET=0;
+                dir = 5;
+                dir = Greenfoot.getRandomNumber(4);
+            }
+            setLocation(x, y - OFFSET);
+            //setRotation(-90);
+        }
+        else if(dir == 0)
+        {
+            Actor collide=getOneObjectAtOffset(0,20,Wall.class);
+            if(collide!=null)
+            {
+                OFFSET=0;
+                dir = 5;
+                dir = Greenfoot.getRandomNumber(4);
+                
+            }
+            
+            setLocation(x, y + OFFSET);
+            //setRotation(-270);
+        }
+        animacion.setFila(dir);
+    }
 }
