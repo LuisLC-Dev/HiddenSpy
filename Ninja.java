@@ -91,11 +91,6 @@ public class Ninja extends Dibujo
     handleDirection();
     nextSprite();
     check();
-    if(info.getVida() == 0){
-    FinDelJuego fin = new FinDelJuego();
-                Greenfoot.setWorld(fin);
-    }
-    
     }
     
     public void check(){
