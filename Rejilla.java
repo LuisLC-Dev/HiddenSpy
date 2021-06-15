@@ -1,5 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 public class Rejilla extends Actor
 {
     private InformacionNinja info;
@@ -23,6 +22,7 @@ public class Rejilla extends Actor
             }else if(info.getNivel() == 4){
                 Victoria victoria = new Victoria(info);
                 Greenfoot.setWorld(victoria);
+                //EscribeFichero("Scores.txt", "Nuevo Jugador",info.getPuntaje());
             }
         }
     }
