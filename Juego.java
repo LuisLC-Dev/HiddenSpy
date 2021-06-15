@@ -14,7 +14,7 @@ public class Juego extends World
         super(1300,680, 1);
         cargaNivel(numNivel, ancho,alto);
         addButtons(world);
-        addObject(new Enemy1(), 60, 60);
+        addObject(new Ninja(), 60, 60);
         //crearNivelDelJuego();
     }
     

@@ -65,7 +65,6 @@ public class Dibujo extends Actor
                 
               if(direccion!=animacion.getDireccion())
                 {
-                    animacion.getImagen().mirrorHorizontally();
                     animacion.setDireccion(direccion);
                 }
                 setImage(animacion.getImagen());
@@ -84,7 +83,6 @@ public class Dibujo extends Actor
                         
                         if(direccion!=animacion.getDireccion())
                         {
-                            animacion.getImagen().mirrorHorizontally();
                             animacion.setDireccion(direccion);
                         }
                         setImage(animacion.getImagen());
@@ -96,7 +94,6 @@ public class Dibujo extends Actor
                          animacion.setColumna(0);
                          if(direccion!=animacion.getDireccion())
                             {
-                                animacion.getImagen().mirrorHorizontally();
                                 animacion.setDireccion(direccion);
                             }
                          setImage(animacion.getImagen());
