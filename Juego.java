@@ -14,8 +14,6 @@ public class Juego extends World
         super(1300,680, 1);
         cargaNivel(numNivel, ancho,alto);
         addButtons(world);
-        addObject(new Enemy1(), 60, 60);
-        //crearNivelDelJuego();
     }
     
     private void cargaNivel(int numNivel, int ancho, int alto){
@@ -25,11 +23,12 @@ public class Juego extends World
             for(int i = 0; i < alto; i++){
                 for(int j = 0; j < ancho; j++){
                     int num = sc.nextInt();
-                    if(num == 1){
-                        addObject(new Wall(),20+40*j,20+40*i);
+                    if(num != 0){
+                        addObject(ActorFactory.getActor(num),20+40*j,20+40*i);
                     }
                 }
             }
+            sc.close();
         }catch (FileNotFoundException e){Greenfoot.stop();}
     }
     

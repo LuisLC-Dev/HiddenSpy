@@ -1,38 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class Dibujo here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Dibujo extends Actor
 {
-    // instance variables - replace the example below with your own
-
- 
     private int direccion;
     private int velocidad;
     public Animacion animacion;
-    /**
-     * Constructor for objects of class Dibujo
-     */
+    
     public Dibujo()
     {
        animacion=new Animacion();
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
     public Animacion getAnimacion()
     {
         // put your code here
         return animacion;
     }
+    
     public int getDireccion()
     {
         return this.direccion;
@@ -42,6 +26,7 @@ public class Dibujo extends Actor
     {
         animacion=nAnimacion;
     }
+    
     public void setDireccion(int nDireccion)
     {
         this.direccion=nDireccion;
@@ -58,8 +43,6 @@ public class Dibujo extends Actor
     
     public int nextSprite()
     {
-        
-        
             if(animacion.getColumna()==0 && animacion.getFrameActual()==0)
             {
                 
