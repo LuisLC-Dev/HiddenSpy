@@ -7,7 +7,7 @@ public class Juego extends World
     InformacionNinja info;
     public Juego(int numNivel, int ancho, int alto, World world, InformacionNinja info)
     {    
-        super(1300,680, 1);
+        super(1280,680, 1);
         this.info = info;
         cargaNivel(numNivel, ancho,alto, info);
         addButtons(world);
@@ -39,7 +39,7 @@ public class Juego extends World
     }
     
     void addButtons(World world){
-        addObject(new ButtonRegresar(world),1200, 640);
+        addObject(new ButtonVolverAJugar(),1180, 640);
         addObject(new ButtonAyuda(),1200, 580);
         addObject(new ButtonRecords(),1200, 520);
     }
